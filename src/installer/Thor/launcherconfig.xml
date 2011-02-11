@@ -1,0 +1,21 @@
+<launcherconfig>
+	<general>
+		<appname>Thor</appname>	
+		<licenseFile>license.txt</licenseFile>
+		<readmeFile>readme.txt</readmeFile>
+			<directoryName>Thor</directoryName>
+		<image>/instlib/logo</image>
+		<prerequisites>instlib/prerequisites.html</prerequisites>
+		<policy default="config/policy.all"/>
+		<codebase value="lib/thor-dl.jar"/>
+		<config default="config/thor.config"/>
+		<finishreadmefile>starting.html</finishreadmefile>
+		<startfile name="Thor Service" command="start-thor"/>
+		<script-var name="name" comment="Name of the Thor instance" default="thor"/>
+		<script-var name="initialise" comment="Initialise the tree(true or false)" default="false"/>
+		<script-var name="xmlfile" comment="XML initialisation file " default="xml/sample_init.xml"/>		
+		<script-var name="group" comment="Name of Jini Group to use in default config" default="public"/>
+		<ctd-import template="config/thor.ctd"/>
+	</general>
+</launcherconfig>
+ 	
