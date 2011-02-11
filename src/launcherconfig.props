@@ -1,0 +1,5 @@
+appname=Thor
+laxfilename=Thor.lax
+laxtemplate=Thor.lax.template
+prerequisites=prerequisites.html
+configuredmainclass=org.jini.projects.thor.service.Startup

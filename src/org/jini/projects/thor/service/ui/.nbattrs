@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="NewDataItemDialog.java">
+        <attr name="class_dependency_javax.swing.JDialog" stringvalue="NewDataItemDialog"/>
+    </fileobject>
+    <fileobject name="ThorTreeRenderer.java">
+        <attr name="class_dependency_javax.swing.tree.TreeCellRenderer" stringvalue="ThorTreeRenderer"/>
+    </fileobject>
+    <fileobject name="ThorUIFact.java">
+        <attr name="class_dependency_java.io.Serializable" stringvalue="ThorUIFact"/>
+        <attr name="class_dependency_net.jini.lookup.ui.factory.JComponentFactory" stringvalue="ThorUIFact"/>
+    </fileobject>
+</attributes>

@@ -1,0 +1,18 @@
+<root>
+    <branch name="Properties">
+        <branch name="Myapp">
+            <props name="POSTGRES">
+                <item name="data.store.type" type="string">SQL</item>
+            </props>
+            <props name="POSTGRESNEW">
+                <item name="data.store.type" type="string">Postgres</item>
+            </props>
+	    <link name="current" path="/Properties/Myapp/POSTGRESNEW"/>	    
+        </branch>        
+    </branch>
+    <branch name="general">        
+        <file name="configurations" path="d:\development\test"/>
+        <file name="policies" path="/home/user/etc/jini/policy"/>
+    </branch>
+    <!--<remote name="someserver" group="development" servicename="prefs" branch="/prefs"/>-->
+</root>

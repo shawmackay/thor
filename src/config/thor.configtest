@@ -1,0 +1,78 @@
+import com.sun.jini.config.KeyStores;
+import java.security.Permission;
+import java.util.Collections;
+import javax.security.auth.login.LoginContext;
+import net.jini.constraint.*;
+import net.jini.core.constraint.*;
+import net.jini.core.entry.*;
+import net.jini.jeri.*;
+import net.jini.jeri.ssl.*;
+import net.jini.lookup.entry.*;
+import org.jini.projects.thor.service.ServerPermission;
+import org.jini.projects.thor.service.ThorServiceType;
+import org.jini.projects.thor.service.ui.*;
+
+
+org.jini.projects.thor{
+	/*
+	* Entry: exporter
+	*  This is the secure service Exporter 
+	* <ul>
+	* 	<li> Use secure exporter </li>
+	* 	<li> Use SSL transport </li>
+	* 	<li> Support ProxyTrust </li>
+	* 	<li> Require integrity for all methods </li>
+	* 	<li> Require ServerPermission </li>
+	* </ul>
+	*/
+	exporter=new BasicJeriExporter(SslServerEndpoint.getInstance(0),new ProxyTrustILFactory(new BasicMethodConstraints(new InvocationConstraints(Integrity.YES, null)),ServerPermission.class));
+
+	/*
+	* Entry: policy
+	*/
+	policy="conf/policy.all";
+
+	/*
+	* Entry: groups
+	*/
+	groups=new String[]{"dev.jini2"};
+
+	/*
+	* Entry: codebase
+	*/
+	codebase="http://e0052sts3s/jinistubs/thor-dl.jar";
+
+	/*
+	* Entry: private static users
+	*  Public Key Certificates 
+	*/
+	private static users=KeyStores.getKeyStore("file:/home/calum/truststore.trust", null);
+
+	/*
+	* Entry: private static server
+	*/
+	private static server=KeyStores.getX500Principal("thor", users);
+
+	/*
+	* Entry: loginContext
+	*  JAAS login 
+	*/
+	loginContext=new LoginContext("org.jini.projects.thor");
+
+	/*
+	* Entry: initialLookupAttributes
+	*/
+	initialLookupAttributes=new Entry[] {new Name(name), new ThorServiceType()};
+
+	/*
+	* Entry: name
+	*/
+	name="master";
+
+	/*
+	* Entry: private static serverUser
+	*/
+	private static serverUser=Collections.singleton(KeyStores.getX500Principal("thor", users));
+
+org.jini.projects.thor}
+

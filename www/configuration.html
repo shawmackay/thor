@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>Thor :: Configuration</title>
+<link type="text/css" rel="stylesheet" href="thor.css"/>
+</head>
+<body> 
+<div class="title">Configuration support</div>
+There are two ways to retrieve a Configuration from Thor.
+<ul> 
+  <li><a href="#url">Custom URL Handler</a></li> 
+  <li><a href="#config">Using Configuration Provider</a></li> 
+</ul> 
+<hr> 
+<a name="url"/> 
+<h2>URL Handler</h2> 
+ConfigurationFile supports URL's as a source for files, so for getting a configuration file out of Thor, I started looking at custom URL handling. Thus, Thor's URL syntax was created. <br/> 
+Firstly, you will have to add the Thor URL packages to the JVM URL search path - add a System property similar to this: <br/><code>-Djava.protocol.handler.pkgs=org.jini.projects.thor.url</code>. <br/> 
+<br/> 
+Then when you require a configuration file you can supply a Thor URL such as the one below:<br/> 
+<br/> 
+<code>thor://master.com.mycompany.jini2/configurations/exportmgr.config</code><br/> 
+<br/> 
+The URL scheme is as follows:<br/> 
+<br/> 
+<code><b>thor://[<i>thor instance Name</i>].[<i>Jini group that instance is in</i>]/[<i>Normal thor branch conventions</i>]</b></code><br/> 
+<br/> 
+You can of course use the URL for any particular item you may wish, but because it does a lookup for every URL passed to it. you'll want to use this scheme occasionally.
+<hr> 
+<a name="config"/> 
+<h2>Dynamic Configuration</h2>
+<h3>Background and Commentary</h3> 
+<p>Originally, one idea for Thor, was to enhance it to provide another ConfigurationProvider that developers could use, in addition to the one providied in the JTSK CI. However, much of the expressiveness in Configuration files are part of that Provider, and also, all I really want is to be able to store and retrieve a configuration from Thor. So after doing the URL Connection, I went back to the base concept behind Thor; provide configurations for applications and services, and allow them to be informed when changes occur. Pre-Jini 2.0 this was okay, because a lot of configuration was done through system properties, hence Thor's PropertyHandler, but Configurations made this way of configuration setting and retrieval redundant. Plus ConfigurationFile adds far more expressive capabilities and syntax checking. So I liked ConfigurationFiles, but I didn't like that they were so static - you load a configuration up into a service, and if you need to change it, you make the changes to the file, and then restart, unless you have some form of polling mechanism.</p> 
+<p>So after some time thinking about how to make a configuration provider that would give you a changing configuration on the fly, I looked at it, and thought I still want configuration files, but I want the things represented by the configuration files to be able to change. </p> 
+<h3>Adding your configuration to Thor</h3>
+Internally, Thor stores a Configuration as a set of parsed objects.<br/>To get a Configuration into Thor, you need to use
+the serviceUI. Open any serviceUI browser, and open up Thor's serviceUI.<br/>
+Select a branch, and then 'Add' from the popup menu. Click the radio button, next to 'Configuration', and a File chooser will be displayed. Select the file you want, and click through the dialogs, confirming them. You should now see a branch, with other sub branches, one name 'imports'
+representing the 'imports' section of your configuration file, and a branch for each of the components in the configuration file.<br/>
+
+<h3>DynamicConfiguration API</h3> 
+<ul>
+<li>Firstly, you will need to add the thor-config.jar to your classpath.</li> 
+<li>Add this line<br/> 
+<code>org.jini.projects.thor.configuration.DynamicConfiguration</code> 
+in <i>META-INF/services/net.jini.config.Configuration</i></li>
+<li>Give your application an address to Thor rather than a config file path<br/> 
+i.e. instead of <code>java -jar $JINILIBS:lib/app.jar org.myserver.myapp.Application config/myapp.config</code><br/> 
+you would use:<br/> 
+<code>java -jar $JINILIBS:lib/app.jar org.myserver.myapp.Application thor://thortest.production/general/thorconfig</code><br/></li> 
+You won't need to add the Thor URL Handler into the java.protocol.handler.pkgs environment variable, because internally, DynamicConfiguration uses a URI to split the locator up and then does all the lookups and connections to Thor.<br/> 
+<br/>
+</ul> 
+That is all that needs to be done to receive automatic updates to configurations, actioning those updates inside your code, requires some more work.<br/> 
+There are two basic ways to get any updated configuration entries into your application: pulling the items into your application, or having them pushed into your application by the Configuration.</br> 
+<h3>Pull method - Polling</h3> 
+<p>The pull method is dependent upon your application checking for updates through the normal getEntry(...) methods; this is the least invasive way of gettingnew configuration information into your app. Also, if you don't cache configuartion entries outside of the configuration, the next time you use getEntry(...) you'll, of course, get the new one.</p> 
+<h3>Push method - Notification</h3> 
+To use notifications, you'll not only need to have the thor_config.jar on your path, you'll have to reference classes in your application. The process is as follows:
+<ol> 
+  <li>Get a Configuration object as normal</li> 
+  <li>Check if the configuration is an instance of DynamicConfiguration</li> 
+  <li>If so, create a filter and a DynamicConfigurationListener</li> 
+  <li>Register the listener and the filter on the Configuration</li>
+</ol> 
+That's it! Now all you have to wait for is the changes to occur in Thor.
+<h2>Example Filters</h2>
+Filters are used by the DynamicConfiguration system so that it can determine whether certain parts of your application want to know about a particular event, and thus whether the dispatcher needs to create a new thread for sending the event to parts of your application.<br/><br/>
+<center>
+<table width="90%" bgcolor="#99CCFF">
+<tr><td>
+<pre>class AllChangeFilter implements DynamicConfigurationFilter {
+    public boolean accept(ConfigurationChangeEvent evt) {
+        System.out.println("Auto-accept");
+        return true;
+    }
+}</pre></td>
+</tr>
+</table>
+
+<font size="-1"><b>Example 1)</b> To be informed of all events, just return true.</font>
+</center>
+<br>
+<center>
+<table width="90%" bgcolor="#99CCFF">
+<tr><td>
+<pre>class WriteFilter implements DynamicConfigurationFilter {
+    public boolean accept(ConfigurationChangeEvent evt) {
+        if (evt.getChangeType() == ChangeConstants.WRITE) {
+            System.out.println("Item written - accepting");
+            return true;
+        } else
+            return false;
+    }
+}</pre></td>
+</tr>
+</table>
+</center>
+<br>
+<center>
+<table width="90%" bgcolor="#99CCFF">
+<tr><td>
+<pre>class DeleteFilter implements DynamicConfigurationFilter {
+    public boolean accept(ConfigurationChangeEvent evt) {
+        if (evt.getChangeType() == ChangeConstants.DELETE) {
+            System.out.println("Item deleted - accepting");
+            return true;
+        } else
+            return false;
+    }
+}</pre></td>
+</tr>
+</table>
+
+<font size="-1"><b>Example 2)</b> You can also check for the type of change that occured, WRITE, CREATE, DELETE</font><br/><br/>
+</center>
+<center>
+<table width="90%" bgcolor="#99CCFF">
+<tr><td>
+<pre>class ComponentFilter implements DynamicConfigurationFilter {
+    public boolean accept(ConfigurationChangeEvent evt) {
+        if (evt.getComponent().equals("org.jini.projects.thor")){
+            System.out.println("Item changed in component - accepting");
+            return true;
+        }else
+            return false;
+    }
+}</pre></td>
+</tr>
+</table>
+
+<font size="-1"><b>Example 3)</b> A filter can drill into the event to find out what component/entry was changed. In addition, you can look at the whole new configuration file.</font><br/><br/>
+</center>
+<h2>Example Listeners</h2>
+<center>
+<table width="90%" bgcolor="#99CCFF">
+<tr><td><pre>class OutputConfigListener implements DynamicConfigurationListener {
+    public void notify(Configuration config, ConfigurationChangeEvent evt) {
+        System.out.println("Notified of change to " + evt.getEntry() + 
+		            " entry in " + evt.getComponent() + " component");
+    }
+}</pre></td>
+</tr>
+</table>
+</center>
+Listeners are notified in their own thread, and in general, you shouldn't have to do much checking, except getting the entry name that was changed and the new item, and invoking your required functionality.
+
+<h3>Full Example</h3>
+<center>
+<table width="90%" bgcolor="#99CCFF">
+<tr><td><pre><font size="-0">import org.jini.projects.thor.configuration.ConfigurationChangeEvent;
+import org.jini.projects.thor.configuration.DynamicConfigurationListener;
+import org.jini.projects.thor.configuration.DynamicConfigurationImpl;
+import org.jini.projects.thor.configuration.DynamicConfigurationFilter;
+import org.jini.projects.thor.service.ChangeConstants;
+
+import net.jini.config.Configuration;
+import net.jini.config.ConfigurationException;
+import net.jini.config.ConfigurationProvider;
+
+public class ConfigTester {
+
+    public static void main(String[] args) throws ConfigurationException {
+        Configuration app = ConfigurationProvider.getInstance(new String[] 
+		                   { "thor://thortest.production/general/thorconfig" });
+        if (app instanceof DynamicConfigurationImpl) {
+            System.out.println("Adding configuration change listeners");
+            DynamicConfigurationImpl conf = (DynamicConfigurationImpl) app;
+            conf.addConfigurationListener(new OutputConfigListener(), new AllChangeFilter());
+            conf.addConfigurationListener(new OutputConfigListener(), new WriteFilter());
+            conf.addConfigurationListener(new OutputConfigListener(), new DeleteFilter());
+            conf.addConfigurationListener(new OutputConfigListener(), new ComponentFilter());
+        }
+        for (int i = 0; i < 10; i++) {
+            System.out.println(app.getEntry("org.jini.projects.thor", "init", Boolean.class));
+            try {
+                Thread.sleep(5000);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+
+        }
+        System.exit(0);
+    }
+}
+
+class OutputConfigListener implements DynamicConfigurationListener {
+    public void notify(Configuration config, ConfigurationChangeEvent evt) {
+        System.out.println("Notified of change to " + evt.getEntry() + 
+		                  " entry in " + evt.getComponent() + " component");
+    }
+}
+
+class AllChangeFilter implements DynamicConfigurationFilter {
+    public boolean accept(ConfigurationChangeEvent evt) {
+        System.out.println("Auto-accept");
+        return true;
+    }
+}
+
+class WriteFilter implements DynamicConfigurationFilter {
+  
+    public boolean accept(ConfigurationChangeEvent evt) {
+        if (evt.getChangeType() == ChangeConstants.WRITE) {
+            System.out.println("Item written - accepting");
+            return true;
+        } else
+            return false;
+    }
+}
+
+class DeleteFilter implements DynamicConfigurationFilter {
+    public boolean accept(ConfigurationChangeEvent evt) {
+        if (evt.getChangeType() == ChangeConstants.DELETE) {
+            System.out.println("Item deleted - accepting");
+            return true;
+        } else
+            return false;
+    }
+}
+
+class ComponentFilter implements DynamicConfigurationFilter {
+    public boolean accept(ConfigurationChangeEvent evt) {
+        if (evt.getComponent().equals("org.jini.projects.thor")){
+            System.out.println("Item changed in component - accepting");
+            return true;
+        }else
+            return false;
+    }
+}</font></pre></td>
+</tr>
+</table>
+</center>
+</body>
+</html>

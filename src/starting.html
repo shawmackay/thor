@@ -1,0 +1,16 @@
+<html>
+<body bgcolor="white">
+<h1>Getting started with Thor</h1>
+
+Thor contains two scripts - <i>startThor</i> and <i>servicestartThor</i><br>startThor is a normal script started from the command line<br>
+servicestartThor runs Thor under the Jini Service Starter framework
+
+<h2>Upgrading Thor</h2>
+If you are running Thor beta3 or earlier, you should use the serviceUI to export your tree to XML, and then change your new version 1.0 configuration file (<i>xmlfile</i> config entry),
+to point to the exported xml, and, if you have one, move the backstore file in <b>&lt;thor1.0_root&gt;</b>/data/&lt;name of your thor instance&gt;.backstore to 
+another directory. Thor will automatically detect that an existing tree is not available and will use the xmlfile to recreate the tree
+<br>
+<br>
+
+</body>
+</html>

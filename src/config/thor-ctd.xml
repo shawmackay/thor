@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templatedb>
+<component name="org.jini.projects.thor">
+		<entry name="codebase" comment="Thor dl codebase" type="String" default='"http://127.0.0.1/thor-dl.jar"' optional="false"/>
+		<entry name="groups" comment="Jini Groups service will join" type="String[]" default='' optional="false"/>
+		<entry name="initialLookupAttributes" comment="Attributes added to the Lookup Attributes in join" type="Entry[]" default='new net.jini.core.entry.Entry[] {new net.jini.lookup.entry.Name(name), new org.jini.projects.thor.ThorServiceType()}' optional="false"/>
+		<entry name="loginContext" comment="JAAS Login Context" type="LoginContext" default='null' optional="true"/>
+		<entry name="name" comment="Name used in Join registration and as storage prefix" type="String" default='""' optional="false"/>
+		<entry name="policy" comment="Location of security policy file" type="String" default='"config/policy.all"' optional="false"/>
+	</component>
+</templatedb>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="storage" targetNamespace="http://storage.cwa.co.uk/" 
+	xmlns:storage="http://storage.cwa.co.uk/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    jxb:version="1.0">
+
+<xsd:annotation>
+  <xsd:appinfo>
+    <jxb:globalBindings
+        fixedAttributeAsConstantProperty="true"
+        collectionType="java.util.ArrayList"
+        typesafeEnumBase="xsd:NCName"
+    	choiceContentProperty="false"
+	typesafeEnumMemberName="generateError"
+	bindingStyle="elementBinding"
+	enableFailFastCheck="false"
+	generateIsSetMethod="false"
+        underscoreBinding="asCharInWord"/>
+    <jxb:schemaBindings>
+	<jxb:package name="org.jini.projects.thor.loader.store.xml"/>
+    
+    </jxb:schemaBindings>
+  </xsd:appinfo>
+  </xsd:annotation>
+
+
+<xsd:element name="branch" type="storage:BranchType"/>
+
+<xsd:complexType name="BranchType">
+	<xsd:sequence>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name = "branch" type="storage:BranchType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="props" type="storage:BranchType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="remote" type="storage:VirtualType" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element name="files" type="storage:VirtualType" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element name="link" type="storage:VirtualType" minOccurs="0" maxOccurs="unbounded"/>			
+			<xsd:element name="itemType" type="storage:ItemType" minOccurs="0" maxOccurs="unbounded"/>	
+		</xsd:choice>
+	</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" />
+</xsd:complexType>
+
+<xsd:complexType name="VirtualType">
+	<xsd:attribute name="name" type="xsd:string" />
+	<xsd:attribute name="link" type="xsd:string" />
+</xsd:complexType>
+
+
+<xsd:complexType name="ItemType">
+   <xsd:simpleContent>
+    <xsd:extension base="xsd:string">
+	<xsd:attribute name="name" type ="xsd:string"/>
+	<xsd:attribute name="type" type ="xsd:string"/>
+    </xsd:extension>
+   </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>

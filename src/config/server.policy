@@ -1,0 +1,9 @@
+/* Security policy for SSL server */
+
+/* Keystore containing trusted certificates to use for authentication */
+keystore "${/}home${/}calum${/}truststore.trust";
+
+/* Grant all permissions to local JAR files */
+grant {
+    permission java.security.AllPermission;
+};

@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Thor</title>
+</head>
+<body> 
+<div class="title">Thor</div>
+<h3>Distributed Registry service</h3> 
+Thor is a service borne out of an administrative need: centralised configuration for distributed applications.<br/> 
+Thor's main principal is that the idea of a repository to hold information for applications and users is a good one, but that the centralisation and localisation of such a repository around a single machine produces obstacles when using it in a network.<br/> 
+<h3>Background</h3> 
+Although a source of great frustration for users and administrators alike, the Windows(tm) Registry was a highly successful way of consolidating application information in a central location. Thor's main focus is to allow Jini services to retrieve runtime configuration information across the network, but allow that information to be administered in a central fashion (i.e. an adminstrator at his PC). Thor also allows services to register on their configuration 'branches' and when changes occur, these changes are then sent out to these interested parties where they can (if required) by acted upon at runtime.<br/> 
+<h3>Design</h3> 
+Thor stores things in a hierarchical manner, and it's API's refer to branches - anyone familiar with Win32 Registry or GConf will be familiar with the concepts. However, Thor can do some very clever things within these branches.<br/> 
+<h4>The branch types</h4> 
+Thor has 7 distinct branch types:
+<ul> 
+  <li>Internal Handler - The generic branch type</li> 
+  <li>Property Handler - Ability to bulk download the contents of a branch as a property object</li> 
+  <li>File Handler - Connects Thor to a directory on the host</li> 
+  <li>Link Handlers - Allows you to link one branch as another within the same tree - symbolic links</li> 
+  <li>Remote Handler - Allows you to link a branch of a remote registry as a link in the local registry</li> 
+  <li>List Handler - Stores items in a list rather than a set of key/value pairs</li>
+  <li>Configuration Handler - Parses a Jini configuration file into a set of sub branches</li>
+</ul> 
+<br/> 
+In addition, Thor also provides a Jdk 1.4 Preferences API implementation (although notify() is not currently implemented), and, a URL handler, so that it can be used as a source for Jini 2.0 Configuration files. For more powerful Configuration capabilites, Thor provides a <code>DynamicConfiguration</code> that updates services when their configuration is updates. For more information see, the <a href="configuration.html">Configuration</a> page<br/> 
+<h3>Downloads</h3> 
+<a href="http://thor.jini.org/files/documents/440/466/Thor.jar">Thor 1.0 is released! </a> - This release adds a few serviceUi tweaks and better cold-start loading using fallback to XML initialisation files. This release also marks the move to ALv2<br/> 
+<h3>Javadocs</h3> 
+Javadocs are now supplied as part of the download, and in CVS checkout<br/>
+<h3>Tutorials</h3> 
+<a href="tutorials.html">Code</a> and <a href="serviceui.html">Service UI</a> 
+</body>
+</html>

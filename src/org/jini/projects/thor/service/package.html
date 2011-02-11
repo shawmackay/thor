@@ -1,0 +1,18 @@
+<body>
+Main service support classes.<br>
+This package contains items for:
+<ul>
+<li>Service Registration</li>
+<li>Lease support</li>
+<li>EventRegistration and Delivery</li>
+<li>Linking to the public root</li>
+<li>Persistence of the public root to disk</li>
+</ul>
+
+<H3> Possible changes</H3>
+<ol>
+<li><h4>Persistency</h4>Likely to remove current implementation of store-on-change to a more efficient batch update, possibly using ReliableLog</li>
+<li><h4>Preferences</h4>Investigate creating a java.util.preferences implementation using Thor</li>
+<li><h4>User and Shared sessions</h4>Implement user and Shared roots and add in capaboility in <code>ThorService</code> to access them thorugh a Session</li>
+</ol>
+</body>

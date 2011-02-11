@@ -1,0 +1,181 @@
+<project name="thor" default="dist" basedir="..">
+	<!-- set global properties for this build -->
+	<property name="src" value="src" />
+	<property name="www" value="www"/>
+	<property name="build" value="build" />
+	<property name="dist" value="dist" />
+	<property name="bin" value="${dist}/bin" />
+
+	<property name="javalib" value="/Volumes/Data/Development/Java/Libs" />
+	<property name="jinilib" value="/Volumes/Data/Development/Java/Jini2.1/lib" />
+
+
+	<taskdef name="install" classname="org.jini.projects.lamplighter.installer.LamplighterTask" />
+
+	<!-- These three properties are only used in constructing the scripts -->
+	<echo message="Ensure that the script properties are set properly" />
+	<property name="thorgroups" value="incaX" />
+	<property name="policy" value="config/policy.all" />
+	<property name="codebase" value="http://localhost:8086/thor-dl.jar" />
+
+	<!--<property name="build.compiler" value="extJavac"/>-->
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+		<path id="project.class.path">
+			<fileset dir="${jinilib}">
+				<include name="jini*.jar" />
+				<include name="sun-util.jar" />
+				<include name="jsk-platform.jar" />
+			</fileset>
+			<!--<fileset dir="${java.home}/../lib" includes="tools.jar" />-->
+			<!-- Include specific project directories -->
+			<fileset dir="${javalib}">
+				<include name="serviceui-1.1a.jar" />
+				<include name="glyph.jar" />
+			</fileset>
+			<!--<pathelement location="${classes}" />-->
+		</path>
+	</target>
+
+	<target name="compile" depends="init">
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac debug="true" deprecation="true" destdir="${build}" srcdir="${src}" target="1.4" source="1.4" >
+			<classpath refid="project.class.path" />
+		</javac>
+		<!--<rmic base="${build}" includes="**/ThorSession_Impl.class,**/ThorServiceImpl.class,**/LeaseLister.class,**/ClientHandler_Impl.class">
+			<classpath refid="project.class.path" />
+		</rmic>-->
+	</target>
+
+
+	<target name="dist" depends="compile">
+		<!-- Create the distribution directory -->
+		<!-- Ensure the icons for the serviceUI are copied-->
+		<copy todir="${build}/org/jini/projects/thor/service/ui/images/">
+			<fileset dir="${src}/org/jini/projects/thor/service/ui/images" includes="**/*.gif" />
+			<fileset dir="${src}/org/jini/projects/thor/service/ui/images" includes="**/*.jpg" />
+		</copy>
+		<copy todir="${build}/org/jini/projects/thor/service/">
+			<fileset dir="${src}/org/jini/projects/thor/service/" includes="**/*.gif" />
+
+		</copy>
+		<mkdir dir="${dist}/lib" />
+		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+		<!-- Build the core appliation into a daily build jar-->
+		<jar jarfile="${dist}/lib/thor-core.jar" basedir="${build}" />
+		<!-- Create the Jini download file -->
+
+		<mkdir dir="${dist}/config" />
+		<mkdir dir="${dist}/xml" />
+		<mkdir dir="${dist}/data" />
+
+		<mkdir dir="${dist}/doc" />
+		<copy todir="${dist}/doc">
+			<fileset dir="${www}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy file="${src}/teststore.xml" tofile="${dist}/xml/sample_init.xml" />
+		<copy todir="${dist}/config" file="${src}/config/exportmgr.config" />
+		<copy todir="${dist}/config" file="${src}/config/policy.all" />
+		<copy todir="${dist}/lib" file="${javalib}/glyph.jar" />
+
+		<mkdir dir="${dist}/tmp" />
+
+
+		<!--
+		<unjar src="${jinilib}/sdm-dl.jar" dest="${dist}/tmp" />
+		<unjar src="${jinilib}/jini-ext.jar" dest="${dist}/tmp" />
+		<unjar src="${javalib}/serviceui-1.1.jar" dest="${dist}/tmp" />
+		-->
+		<jar jarfile="${dist}/lib/thor-dl.jar">
+			<fileset dir="${build}" includes="**/*Stub.class" />
+			<fileset dir="${build}" includes="**/*ConfigurationEntry.class" />
+			<fileset dir="${build}" includes="**/*ConfigurationFileWrapper.class" />
+			<fileset dir="${build}" includes="**/*ConfigurationChangeEvent.class" />
+			<fileset dir="${build}" includes="**/ui/*.class" />
+			<fileset dir="${build}" includes="**/*.gif" />
+			<fileset dir="${build}" includes="**/*.jpg" />
+
+			<fileset dir="${build}" includes="**/EvtCookie.class" />
+			<fileset dir="${build}" includes="**/ThorService.class" />
+			<fileset dir="${build}" includes="**/*Constant*.class" />
+			<fileset dir="${build}" includes="**/ThorSession.class" />
+			<fileset dir="${build}" includes="**/ThorServiceType.class" />
+			<fileset dir="${build}" includes="**/NamedItem.class" />
+			<fileset dir="${build}" includes="**/*Proxy.class" />
+			<fileset dir="${build}" includes="**/constrainable/*.class" />
+			<fileset dir="${build}" includes="**/Branch.class" />
+			<fileset dir="${build}" includes="**/ChangeEventListener.class" />
+			<fileset dir="${build}" includes="**/ChangeEventRegistration.class" />
+			<fileset dir="${build}" includes="**/ChangeEvent.class" />
+			<fileset dir="${build}" includes="**/HierarchyHandler.class" />
+			<fileset dir="${build}" includes="**/*Proxy.class" />
+			<fileset dir="${build}" includes="**/*Admin.class" />
+			<fileset dir="${dist}/tmp" includes="net/jini/entry/*.class" />
+			<fileset dir="${dist}/tmp" includes="net/jini/lookup/*Stub.class" />
+			<fileset dir="${dist}/tmp" includes="net/jini/lookup/entry/**/*.class" />
+			<fileset dir="${dist}/tmp" includes="net/jini/lookup/ui/**.class" />
+			<fileset dir="${dist}/tmp" includes="net/jini/lookup/ui/attribute/*.class" />
+			<fileset dir="${dist}/tmp" includes="com/artima/lookup/util/*.class" />
+		</jar>
+		<jar jarfile="${dist}/lib/thor-config.jar">
+			<fileset dir="${build}" includes="org/jini/projects/thor/handlers/HierarchyHandler.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ThorService.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/handlers/Branch.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ThorSession.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeConstants.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeEventListener.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeEventListenerImpl.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeEvent.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/url/**/*.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/configuration/**/*.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/handlers/support/*.class" />
+		</jar>
+		<!-- Create the client interface file -->
+		<jar jarfile="${dist}/lib/thor-itf.jar">
+			<fileset dir="${build}" includes="org/jini/projects/thor/handlers/HierarchyHandler.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ThorService.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/handlers/Branch.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ThorSession.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeConstants.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeEventListener.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeEventListenerImpl.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/service/ChangeEvent.class" />
+			<fileset dir="${build}" includes="org/jini/projects/thor/url/**/*.class" />
+		</jar>
+
+		<jar jarfile="${dist}/lib/thor-client.jar">
+			<fileset dir="${build}" includes="org/jini/projects/thor/client/*.class" />
+		</jar>
+		<!-- Build the installer using lamplighter-->
+		<copy file="${src}/starting.html" todir="${dist}" />
+		<install productname="Thor" license="${src}/LICENSE.txt" readme="${src}/README.txt" directoryToJar="${dist}" outputname="Thor" launcherconfig="${src}/launcherconfig.xml" prerequisites="${src}/prerequisites.html" scriptpackdir="${src}/scriptpacks" logofile="${src}/org/jini/projects/thor/service/thormono.gif" />
+	</target>
+
+	<target name="clean">
+		<!-- Delete the ${build} and ${dist} directory trees -->
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+	</target>
+
+
+	<target name="javadoc" depends="init">
+		<mkdir dir="${dist}/javadoc" />
+		<javadoc destdir="${dist}/javadoc" packagenames="org.jini.projects.thor.*" additionalparam=" @${basedir}/src/jdtags" source="1.4" doctitle="Thor: Distributed Registry" windowtitle="Thor Documentation">
+			<sourcepath>
+				<pathelement location="${src}" />
+			</sourcepath>
+			<classpath refid="project.class.path" />
+			<!--            
+            <link href="http: Link to j2sdk docs"/>
+            <link href="http: Link to Jini2.0 docs"/>            
+            -->
+		</javadoc>
+	</target>
+
+	<target name="all" depends="dist, javadoc" />
+</project>

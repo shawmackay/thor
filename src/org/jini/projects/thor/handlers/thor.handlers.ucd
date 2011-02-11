@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="ASCII"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" size="1426,2386" id="e0052sts3scountrywideassuredcoukcalumthor0" metadata="nsuml-1.4" initialized="true" showWireOptions="1" scrolledY="296">
+  <children xsi:type="editmodel:ClassEditModel" location="1205,594" size="201,625" id="e0052sts3scountrywideassuredcoukcalumthor568" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor643;e0052sts3scountrywideassuredcoukcalumthor583;e0052sts3scountrywideassuredcoukcalumthor571;e0052sts3scountrywideassuredcoukcalumthor600;e0052sts3scountrywideassuredcoukcalumthor621;e0052sts3scountrywideassuredcoukcalumthor686;e0052sts3scountrywideassuredcoukcalumthor647;e0052sts3scountrywideassuredcoukcalumthor631;e0052sts3scountrywideassuredcoukcalumthor608;e0052sts3scountrywideassuredcoukcalumthor669;e0052sts3scountrywideassuredcoukcalumthor653;e0052sts3scountrywideassuredcoukcalumthor585;e0052sts3scountrywideassuredcoukcalumthor663;e0052sts3scountrywideassuredcoukcalumthor674;e0052sts3scountrywideassuredcoukcalumthor651;e0052sts3scountrywideassuredcoukcalumthor627;e0052sts3scountrywideassuredcoukcalumthor616;e0052sts3scountrywideassuredcoukcalumthor592;e0052sts3scountrywideassuredcoukcalumthor579;e0052sts3scountrywideassuredcoukcalumthor610;e0052sts3scountrywideassuredcoukcalumthor598;e0052sts3scountrywideassuredcoukcalumthor639;e0052sts3scountrywideassuredcoukcalumthor604;e0052sts3scountrywideassuredcoukcalumthor575;e0052sts3scountrywideassuredcoukcalumthor636;e0052sts3scountrywideassuredcoukcalumthor619;e0052sts3scountrywideassuredcoukcalumthor660;e0052sts3scountrywideassuredcoukcalumthor682;e0052sts3scountrywideassuredcoukcalumthor595;e0052sts3scountrywideassuredcoukcalumthor588;e0052sts3scountrywideassuredcoukcalumthor613;e0052sts3scountrywideassuredcoukcalumthor667;e0052sts3scountrywideassuredcoukcalumthor623;e0052sts3scountrywideassuredcoukcalumthor657;e0052sts3scountrywideassuredcoukcalumthor634;e0052sts3scountrywideassuredcoukcalumthor569;e0052sts3scountrywideassuredcoukcalumthor677;e0052sts3scountrywideassuredcoukcalumthor581;e0052sts3scountrywideassuredcoukcalumthor577">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,576">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor583"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor585"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor627"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor674"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor677"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor682"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor636"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor610"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor604"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor600"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor613"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor621"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor598"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor619"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor623"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor616"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor608"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor651"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor643"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor647"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor639"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor631"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor663"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor653"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor667"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor686"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor660"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor657"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor669"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor595"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor592"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor634"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.0" target="//@children.2/@sourceConnections.0" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="974,594" size="201,499" id="e0052sts3scountrywideassuredcoukcalumthor721" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor795;e0052sts3scountrywideassuredcoukcalumthor837;e0052sts3scountrywideassuredcoukcalumthor787;e0052sts3scountrywideassuredcoukcalumthor825;e0052sts3scountrywideassuredcoukcalumthor819;e0052sts3scountrywideassuredcoukcalumthor769;e0052sts3scountrywideassuredcoukcalumthor775;e0052sts3scountrywideassuredcoukcalumthor847;e0052sts3scountrywideassuredcoukcalumthor855;e0052sts3scountrywideassuredcoukcalumthor803;e0052sts3scountrywideassuredcoukcalumthor813;e0052sts3scountrywideassuredcoukcalumthor809;e0052sts3scountrywideassuredcoukcalumthor774;e0052sts3scountrywideassuredcoukcalumthor845;e0052sts3scountrywideassuredcoukcalumthor778;e0052sts3scountrywideassuredcoukcalumthor799;e0052sts3scountrywideassuredcoukcalumthor811;e0052sts3scountrywideassuredcoukcalumthor833;e0052sts3scountrywideassuredcoukcalumthor851;e0052sts3scountrywideassuredcoukcalumthor783;e0052sts3scountrywideassuredcoukcalumthor806;e0052sts3scountrywideassuredcoukcalumthor828;e0052sts3scountrywideassuredcoukcalumthor791;e0052sts3scountrywideassuredcoukcalumthor821;e0052sts3scountrywideassuredcoukcalumthor771;e0052sts3scountrywideassuredcoukcalumthor843;e0052sts3scountrywideassuredcoukcalumthor780;e0052sts3scountrywideassuredcoukcalumthor816;e0052sts3scountrywideassuredcoukcalumthor840">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,450">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor775"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor821"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor828"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor825"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor847"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor806"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor799"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor795"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor845"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor811"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor819"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor855"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor803"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor809"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor783"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor780"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor791"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor787"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor833"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor843"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor851"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor837"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor840"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor813"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor816"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="e0052sts3scountrywideassuredcoukcalumthor722" connectionRouterKind="Manual" source="//@children.1" target="//@children.2/@sourceConnections.0" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="50,594" size="201,643" id="e0052sts3scountrywideassuredcoukcalumthor749" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor1128;e0052sts3scountrywideassuredcoukcalumthor1049;e0052sts3scountrywideassuredcoukcalumthor1106;e0052sts3scountrywideassuredcoukcalumthor1117;e0052sts3scountrywideassuredcoukcalumthor1038;e0052sts3scountrywideassuredcoukcalumthor1055;e0052sts3scountrywideassuredcoukcalumthor1146;e0052sts3scountrywideassuredcoukcalumthor1091;e0052sts3scountrywideassuredcoukcalumthor1102;e0052sts3scountrywideassuredcoukcalumthor1113;e0052sts3scountrywideassuredcoukcalumthor1060;e0052sts3scountrywideassuredcoukcalumthor1124;e0052sts3scountrywideassuredcoukcalumthor1026;e0052sts3scountrywideassuredcoukcalumthor1110;e0052sts3scountrywideassuredcoukcalumthor1034;e0052sts3scountrywideassuredcoukcalumthor1063;e0052sts3scountrywideassuredcoukcalumthor1077;e0052sts3scountrywideassuredcoukcalumthor1024;e0052sts3scountrywideassuredcoukcalumthor1088;e0052sts3scountrywideassuredcoukcalumthor1057;e0052sts3scountrywideassuredcoukcalumthor1093;e0052sts3scountrywideassuredcoukcalumthor1148;e0052sts3scountrywideassuredcoukcalumthor1133;e0052sts3scountrywideassuredcoukcalumthor1071;e0052sts3scountrywideassuredcoukcalumthor1017;e0052sts3scountrywideassuredcoukcalumthor1032;e0052sts3scountrywideassuredcoukcalumthor1022;e0052sts3scountrywideassuredcoukcalumthor1009;e0052sts3scountrywideassuredcoukcalumthor1075;e0052sts3scountrywideassuredcoukcalumthor1052;e0052sts3scountrywideassuredcoukcalumthor1030;e0052sts3scountrywideassuredcoukcalumthor1120;e0052sts3scountrywideassuredcoukcalumthor1044;e0052sts3scountrywideassuredcoukcalumthor1142;e0052sts3scountrywideassuredcoukcalumthor1085;e0052sts3scountrywideassuredcoukcalumthor1138;e0052sts3scountrywideassuredcoukcalumthor1081;e0052sts3scountrywideassuredcoukcalumthor1007;e0052sts3scountrywideassuredcoukcalumthor1036;e0052sts3scountrywideassuredcoukcalumthor1067;e0052sts3scountrywideassuredcoukcalumthor1073;e0052sts3scountrywideassuredcoukcalumthor1020;e0052sts3scountrywideassuredcoukcalumthor1130;e0052sts3scountrywideassuredcoukcalumthor1014;e0052sts3scountrywideassuredcoukcalumthor1098;e0052sts3scountrywideassuredcoukcalumthor1040">
+    <children xsi:type="editmodel:CompartmentEditModel" size="114,18">
+      <children xsi:type="editmodel:AttributeEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1009"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,576">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1040"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1044"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1038"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1113"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1130"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1133"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1138"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1085"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1081"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1057"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1067"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1063"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1075"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1071"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1073"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1077"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1060"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1055"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1091"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1102"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1088"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1106"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1098"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1124"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1120"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1128"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1142"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1117"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1110"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1093"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1052"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor1049"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.5/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.3/@sourceConnections.0 //@children.1/@sourceConnections.0 //@children.0/@sourceConnections.0" id="e0052sts3scountrywideassuredcoukcalumthor750" connectionRouterKind="GeneralizationManhattan" source="//@children.2" target="//@children.6" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,494" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="743,594" size="201,499" id="e0052sts3scountrywideassuredcoukcalumthor295" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor336;e0052sts3scountrywideassuredcoukcalumthor367;e0052sts3scountrywideassuredcoukcalumthor301;e0052sts3scountrywideassuredcoukcalumthor309;e0052sts3scountrywideassuredcoukcalumthor354;e0052sts3scountrywideassuredcoukcalumthor333;e0052sts3scountrywideassuredcoukcalumthor311;e0052sts3scountrywideassuredcoukcalumthor329;e0052sts3scountrywideassuredcoukcalumthor307;e0052sts3scountrywideassuredcoukcalumthor361;e0052sts3scountrywideassuredcoukcalumthor319;e0052sts3scountrywideassuredcoukcalumthor376;e0052sts3scountrywideassuredcoukcalumthor342;e0052sts3scountrywideassuredcoukcalumthor327;e0052sts3scountrywideassuredcoukcalumthor316;e0052sts3scountrywideassuredcoukcalumthor313;e0052sts3scountrywideassuredcoukcalumthor339;e0052sts3scountrywideassuredcoukcalumthor298;e0052sts3scountrywideassuredcoukcalumthor365;e0052sts3scountrywideassuredcoukcalumthor357;e0052sts3scountrywideassuredcoukcalumthor296;e0052sts3scountrywideassuredcoukcalumthor346;e0052sts3scountrywideassuredcoukcalumthor323;e0052sts3scountrywideassuredcoukcalumthor372;e0052sts3scountrywideassuredcoukcalumthor304;e0052sts3scountrywideassuredcoukcalumthor350">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,450">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor298"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor342"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor367"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor354"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor372"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor313"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor319"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor323"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor327"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor307"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor311"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor329"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor316"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor309"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor333"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor346"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor357"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor350"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor361"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor365"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor376"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor339"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor336"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor304"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor301"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.3" target="//@children.2/@sourceConnections.0" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="512,594" size="201,589" id="e0052sts3scountrywideassuredcoukcalumthor727" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor896;e0052sts3scountrywideassuredcoukcalumthor950;e0052sts3scountrywideassuredcoukcalumthor916;e0052sts3scountrywideassuredcoukcalumthor891;e0052sts3scountrywideassuredcoukcalumthor880;e0052sts3scountrywideassuredcoukcalumthor936;e0052sts3scountrywideassuredcoukcalumthor899;e0052sts3scountrywideassuredcoukcalumthor958;e0052sts3scountrywideassuredcoukcalumthor875;e0052sts3scountrywideassuredcoukcalumthor889;e0052sts3scountrywideassuredcoukcalumthor878;e0052sts3scountrywideassuredcoukcalumthor942;e0052sts3scountrywideassuredcoukcalumthor912;e0052sts3scountrywideassuredcoukcalumthor902;e0052sts3scountrywideassuredcoukcalumthor967;e0052sts3scountrywideassuredcoukcalumthor870;e0052sts3scountrywideassuredcoukcalumthor920;e0052sts3scountrywideassuredcoukcalumthor956;e0052sts3scountrywideassuredcoukcalumthor929;e0052sts3scountrywideassuredcoukcalumthor924;e0052sts3scountrywideassuredcoukcalumthor945;e0052sts3scountrywideassuredcoukcalumthor873;e0052sts3scountrywideassuredcoukcalumthor906;e0052sts3scountrywideassuredcoukcalumthor910;e0052sts3scountrywideassuredcoukcalumthor883;e0052sts3scountrywideassuredcoukcalumthor954;e0052sts3scountrywideassuredcoukcalumthor939;e0052sts3scountrywideassuredcoukcalumthor932;e0052sts3scountrywideassuredcoukcalumthor872;e0052sts3scountrywideassuredcoukcalumthor893;e0052sts3scountrywideassuredcoukcalumthor963;e0052sts3scountrywideassuredcoukcalumthor886;e0052sts3scountrywideassuredcoukcalumthor971;e0052sts3scountrywideassuredcoukcalumthor947">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,540">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor880"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor878"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor883"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor932"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor958"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor947"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor963"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor893"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor899"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor912"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor902"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor910"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor956"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor954"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor971"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor896"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor889"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor891"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor906"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor920"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor916"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor886"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor950"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor945"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor967"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor929"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor936"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor924"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor942"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor939"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" id="e0052sts3scountrywideassuredcoukcalumthor728" connectionRouterKind="Manual" source="//@children.4" target="//@children.2/@sourceConnections.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="281,594" size="201,553" id="e0052sts3scountrywideassuredcoukcalumthor406" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor409;e0052sts3scountrywideassuredcoukcalumthor483;e0052sts3scountrywideassuredcoukcalumthor441;e0052sts3scountrywideassuredcoukcalumthor468;e0052sts3scountrywideassuredcoukcalumthor476;e0052sts3scountrywideassuredcoukcalumthor435;e0052sts3scountrywideassuredcoukcalumthor460;e0052sts3scountrywideassuredcoukcalumthor425;e0052sts3scountrywideassuredcoukcalumthor423;e0052sts3scountrywideassuredcoukcalumthor492;e0052sts3scountrywideassuredcoukcalumthor412;e0052sts3scountrywideassuredcoukcalumthor437;e0052sts3scountrywideassuredcoukcalumthor415;e0052sts3scountrywideassuredcoukcalumthor420;e0052sts3scountrywideassuredcoukcalumthor445;e0052sts3scountrywideassuredcoukcalumthor456;e0052sts3scountrywideassuredcoukcalumthor449;e0052sts3scountrywideassuredcoukcalumthor464;e0052sts3scountrywideassuredcoukcalumthor497;e0052sts3scountrywideassuredcoukcalumthor417;e0052sts3scountrywideassuredcoukcalumthor488;e0052sts3scountrywideassuredcoukcalumthor428;e0052sts3scountrywideassuredcoukcalumthor452;e0052sts3scountrywideassuredcoukcalumthor501;e0052sts3scountrywideassuredcoukcalumthor473;e0052sts3scountrywideassuredcoukcalumthor410;e0052sts3scountrywideassuredcoukcalumthor443;e0052sts3scountrywideassuredcoukcalumthor407;e0052sts3scountrywideassuredcoukcalumthor485;e0052sts3scountrywideassuredcoukcalumthor480;e0052sts3scountrywideassuredcoukcalumthor431">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,504">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor415"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor412"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor476"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor492"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor485"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor497"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor425"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor437"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor431"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor443"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor435"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor441"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor445"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor428"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor423"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor464"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor456"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor452"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor449"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor460"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor488"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor483"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor501"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor473"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor480"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor468"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor420"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor417"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.5" target="//@children.2/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" anchorKind="FixedAtEdge"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="627,50" size="201,494" targetConnections="//@children.2/@sourceConnections.0" id="e0052sts3scountrywideassuredcoukcalumthor102" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor247;e0052sts3scountrywideassuredcoukcalumthor263;e0052sts3scountrywideassuredcoukcalumthor242;e0052sts3scountrywideassuredcoukcalumthor225;e0052sts3scountrywideassuredcoukcalumthor266;e0052sts3scountrywideassuredcoukcalumthor235;e0052sts3scountrywideassuredcoukcalumthor269;e0052sts3scountrywideassuredcoukcalumthor206;e0052sts3scountrywideassuredcoukcalumthor282;e0052sts3scountrywideassuredcoukcalumthor271;e0052sts3scountrywideassuredcoukcalumthor217;e0052sts3scountrywideassuredcoukcalumthor209;e0052sts3scountrywideassuredcoukcalumthor239;e0052sts3scountrywideassuredcoukcalumthor251;e0052sts3scountrywideassuredcoukcalumthor237;e0052sts3scountrywideassuredcoukcalumthor221;e0052sts3scountrywideassuredcoukcalumthor245;e0052sts3scountrywideassuredcoukcalumthor232;e0052sts3scountrywideassuredcoukcalumthor213;e0052sts3scountrywideassuredcoukcalumthor273;e0052sts3scountrywideassuredcoukcalumthor229;e0052sts3scountrywideassuredcoukcalumthor259;e0052sts3scountrywideassuredcoukcalumthor278;e0052sts3scountrywideassuredcoukcalumthor254">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="178,432">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor247"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor254"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor251"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor273"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor232"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor221"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor225"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor271"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor237"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor245"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor282"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor229"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor235"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor213"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor209"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor206"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor217"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor259"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor269"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor278"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor263"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor266"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor239"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor242"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" location="65,1287" size="136,494" targetConnections="//@children.8/@sourceConnections.0" id="e0052sts3scountrywideassuredcoukcalumthor1" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor3;e0052sts3scountrywideassuredcoukcalumthor13;e0052sts3scountrywideassuredcoukcalumthor17;e0052sts3scountrywideassuredcoukcalumthor74;e0052sts3scountrywideassuredcoukcalumthor46;e0052sts3scountrywideassuredcoukcalumthor35;e0052sts3scountrywideassuredcoukcalumthor71;e0052sts3scountrywideassuredcoukcalumthor60;e0052sts3scountrywideassuredcoukcalumthor53;e0052sts3scountrywideassuredcoukcalumthor9;e0052sts3scountrywideassuredcoukcalumthor43;e0052sts3scountrywideassuredcoukcalumthor57;e0052sts3scountrywideassuredcoukcalumthor32;e0052sts3scountrywideassuredcoukcalumthor79;e0052sts3scountrywideassuredcoukcalumthor77;e0052sts3scountrywideassuredcoukcalumthor21;e0052sts3scountrywideassuredcoukcalumthor67;e0052sts3scountrywideassuredcoukcalumthor37;e0052sts3scountrywideassuredcoukcalumthor25;e0052sts3scountrywideassuredcoukcalumthor48;e0052sts3scountrywideassuredcoukcalumthor29;e0052sts3scountrywideassuredcoukcalumthor51;e0052sts3scountrywideassuredcoukcalumthor81;e0052sts3scountrywideassuredcoukcalumthor40">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="113,432">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor53"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor57"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor60"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor32"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor21"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor25"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor79"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor46"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor51"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor29"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor35"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor37"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor40"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor3"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor9"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor17"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor13"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor67"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor77"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor71"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor74"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor43"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor48"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor81"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="50,1831" size="167,535" id="e0052sts3scountrywideassuredcoukcalumthor100" runTimeClassModel="e0052sts3scountrywideassuredcoukcalumthor135;e0052sts3scountrywideassuredcoukcalumthor143;e0052sts3scountrywideassuredcoukcalumthor129;e0052sts3scountrywideassuredcoukcalumthor101;e0052sts3scountrywideassuredcoukcalumthor119;e0052sts3scountrywideassuredcoukcalumthor137;e0052sts3scountrywideassuredcoukcalumthor145;e0052sts3scountrywideassuredcoukcalumthor148;e0052sts3scountrywideassuredcoukcalumthor125;e0052sts3scountrywideassuredcoukcalumthor176;e0052sts3scountrywideassuredcoukcalumthor172;e0052sts3scountrywideassuredcoukcalumthor169;e0052sts3scountrywideassuredcoukcalumthor140;e0052sts3scountrywideassuredcoukcalumthor162;e0052sts3scountrywideassuredcoukcalumthor116;e0052sts3scountrywideassuredcoukcalumthor189;e0052sts3scountrywideassuredcoukcalumthor152;e0052sts3scountrywideassuredcoukcalumthor105;e0052sts3scountrywideassuredcoukcalumthor108;e0052sts3scountrywideassuredcoukcalumthor179;e0052sts3scountrywideassuredcoukcalumthor160;e0052sts3scountrywideassuredcoukcalumthor111;e0052sts3scountrywideassuredcoukcalumthor156;e0052sts3scountrywideassuredcoukcalumthor184;e0052sts3scountrywideassuredcoukcalumthor122;e0052sts3scountrywideassuredcoukcalumthor114;e0052sts3scountrywideassuredcoukcalumthor133;e0052sts3scountrywideassuredcoukcalumthor166">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,486">
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor105"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor172"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor176"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor179"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor116"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor125"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor119"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor129"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor143"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor133"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor135"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor189"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor122"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor114"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor137"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor140"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor145"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor148"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor152"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor156"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor162"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor160"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor166"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor169"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor111"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor108"/>
+      <children xsi:type="editmodel:MethodEditModel" id="e0052sts3scountrywideassuredcoukcalumthor184"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" connectionRouterKind="Manual" source="//@children.8" target="//@children.7" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0">
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showInterfaceStereotype="true" showClassStereotype="true" showPackageStereotype="true"/>
+</editmodel:ClassDiagramEditModel>

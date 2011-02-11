@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>Tutorials :: Thor</title>
+<link type="text/css" rel="stylesheet" href="thor.css"/>
+</head>
+<body>
+<div class="title">Tutorials</div>
+There are 6 tutorials
+<ol>
+<li><a href="#navigate">Navigate the tree</a></li>
+<li><a href="#getdata">Retrieve data</a></li>
+<li><a href="#adddata">Add/Modify data</a></li>
+<li><a href="#addbulk">Add data and branches in bulk</a></li>
+<li><a href="#changes">Be informed of Changes to certain branches</a></li>
+<li><a href="#prefs">Use the Preferences provider</a></li>
+<li><a href="#config">Use Thor for Jini 2.0 Configuration files</a></li>
+</ol>
+<br/>
+<a name="navigate"/>
+<h2>Navigating the Tree</h2>
+Thor stores everything within a tree-like structure and understanding the API regarding trees is essential to being able to understand Thor in it's native API.<br/>
+Firstly, any branch in Thor can reference any other branch even if it is already being referenced elsewhere. Thus, branches have no concept of a 'parent'. If you need an idea of 'I arrived at this new branch through this parent branch' you will need to keep track of it in some other fashion - this is what the Preferences provider does. Why does this happen? Because it allows symbolic links through LinkHandlers, and for the most part the 'parent' concept is irrelevant.<br/>
+<br/>
+Some code<br/>
+<br/>
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>
+net.jini.core.lookup.ServiceRegistrar[] registrars = discoveryEvent.getRegistrars();
+<b>Class[] classType = {org.jini.projects.thor.service.ThorService.class};
+net.jini.core.entry.Entry[] attrs = {new net.jini.lookup.entry.Name("master")};</b>
+net.jini.core.lookup.ServiceTemplate svctmp = new net.jini.core.lookup.ServiceTemplate(null, classType, attrs);
+ThorService thor=null;
+ThorSession thorsession = null;
+for (int i = 0; i &lt; registrars.length; i++) {
+	thor = (org.jini.projects.thor.service.ThorService) registrars[0].lookup(svctmp);
+	if (thor != null)
+		break;
+}
+if(thor!=null)
+	ThorSession thorsession = thor.getSession();
+</pre></td></tr></table>
+<font size=-1>Example 1) Getting the ThorService and a Session</font>
+</center><br/><br/>
+
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>
+//Get a root and then a specific branches off that root
+Branch sessionRoot = session.getRoot();
+Branch athenaBranch = sessionRoot.getBranch("Properties/Athena");
+Branch subBranch=athenaBranch.getBranch("postgres");
+</pre></td></tr></table>
+<font size=-1>Example 2) Getting branches</font>
+</center><br/><br/>
+
+<a name="getdata"/>
+<h2>Getting data</h2>
+There are a number of ways to get data, based upon whether you want more than one item or if the item is in the current branch<br/>
+The <code>locate()</code> method works on the current branch but allows a path that can include sub-branches so, for instance, assume the path <code>a/b/c/d/mydata</code> if we have a reference to branch a/b (in bBranch) we could use<br/><br/><code>bBranch.locate("c/d/mydata")</code><br/><br/>
+The getChild() methods, however, only return objects that are children of the node your working on. so you could get<br/><br/> <code>cBranch=(Branch) bBranch.getChild("c");</code><br/> but not <br/><code>String mydata = (String) bBranch.getChild("c/d/mydata")</code><br/><br/>
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>
+//Find an item on a given branch with a given name
+String timeout = (String) sessionRoot.locate("Configuration/Athena", "org.jini.projects.athena.connection.adhoctimeout");
+//Query a property handler for a single item
+Branch propHandler = sessionRoot.getBranch("Properties/Athena/Oracle");
+String x = (String) sessionRoot.locate("Properties/Athena/Oracle/org.jini.projects.athena.service.name");
+String subx = (String) subBranch.getChild("postgresHost");</pre></td></tr></table>
+<font size=-1>Example 3) Getting single data</font>
+</center><br/><br/>
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>
+// Query a property handler for all items - sent back as a java.util.Properties object
+java.util.Properties props = (java.util.Properties) propHandler.getData();
+props.list(System.out);
+
+//Obtain the standard datablock
+Vector v = (Vector) subBranch.getDataBlock();
+Iterator iter = v.iterator();
+while(iter.hasNext()){
+	NamedItem ni = (NamedItem) iter.next();
+	System.out.println(ni.name + ": " + ni.data);
+}
+</pre></td></tr></table>
+<font size=-1>Example 4) Getting bulk data</font>
+</center><br/>
+In most cases you will probably not need to use bulk data loads, but they are useful to reduce remote calls.
+<br/>
+<a name="adddata"/>
+<h2>Adding data</h2>
+Adding data is acheived through the add() method, and addition of branches is added through the addBranch() methods<br>
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>
+ //Add a named item to a branch
+athenaBranch.add("athena.connection.adhoctimeout", "500");
+//Create a new Internal branch
+sessionRoot.addBranch("StandardBranch");
+
+//Create a branch from a set of properties
+HashMap propattributes = new HashMap();
+propattributes.put("PROPS", System.getProperties());
+sessionRoot.addBranch("PropsBranch", AttributeConstants.PROPERTY, propattributes);
+
+//Create a branch linked to a directory on the filesystem
+//This is a directory on the same machine as the Thor instance
+HashMap fileattributes = new HashMap();
+fileattributes.put("FILEPATH", "/some/directory/on/server");
+sessionRoot.addBranch("FileBranch", AttributeConstants.FILE, fileattributes);
+
+</pre></td></tr></table>
+<font size=-1>Example 5) Adding new data and branches</font>
+</center><br/><br/>
+
+<a name="addbulk"/>
+<h2>Adding data and branches in bulk</h2>
+Adding data in bulk is done using an XML file, and calling the addXML() method on the branch.<br>
+The XML is sent to the service where it is interpreted and branches and items are added in sequence, as the XML is parsed.<br/>
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>&lt;root&gt;
+    &lt;branch name=&quot;Properties&quot;&gt;
+        &lt;branch name=&quot;Athena&quot;&gt;
+            &lt;props name=&quot;POSTGRES&quot;&gt;
+                &lt;item name=&quot;org.jini.projects.athena.connect.type&quot; type=&quot;string&quot;&gt;SQL&lt;/item&gt;
+            &lt;/props&gt;
+            &lt;props name=&quot;POSTGRESNEW&quot;&gt;
+                &lt;item name=&quot;org.jini.projects.athena.connect.type&quot; type=&quot;string&quot;&gt;Postgres&lt;/item&gt;
+            &lt;/props&gt;
+	    &lt;link name=&quot;current&quot; path=&quot;/Properties/Athena/POSTGRESNEW&quot;/&gt;	    
+        &lt;/branch&gt;        
+    &lt;/branch&gt;
+    &lt;branch name=&quot;general&quot;&gt;
+        &lt;file name=&quot;configurations&quot; path=&quot;/home/user/etc/jini/config&quot;/&gt;
+        &lt;file name=&quot;policies&quot; path=&quot;/home/user/etc/jini/policy&quot;/&gt;
+    &lt;/branch&gt;
+    &lt;remote name=&quot;someserver&quot; group=&quot;development&quot; servicename=&quot;prefs&quot; initialbranch=&quot;/prefs&quot;/&gt;
+&lt;/root&gt;</pre></td></tr></table></center>
+<br/><br/>
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>
+//Add multiple items to a branch
+File f = new File("bulkload.xml");
+byte[] xmlbytes= new byte[(int)f.getLength()];
+FileInputStream fis = new FileInputStream(f);
+fis.read(xmlbytes);
+fis.close();
+sessionRoot.addXML(new String(xmlbytes));</pre></td></tr></table>
+<font size=-1>Example 6) Adding multiple items using the loadXML() method</font>
+</center><br/><br/>
+
+
+<a name="changes"/>
+<h2>Being informed of changes on a branch</h2>
+One capability of Thor, is that you can register for remote events on a branch, so that when changes occur in the tree, your application can be informed and react accordingly. Of course, you don't have to react to these events, but Thor will send them to you. The EventRegistration is leased<br/>
+
+<h3>The application code</h3>
+In this example, we'll use a convenience class that just outputs that something has changed. In your code you'll need to implement ChangeEventListener.<br/><br/>
+<center>
+<table width="80%" bgcolor="#d1d1ff" cellpadding="6"><tr><td><pre>
+org.jini.projects.thor.service.ChangeEventListenerImpl handleAllMods = new org.jini.projects.thor.service.ChangeEventListenerImpl();            
+Remote proxy =exp.export(handleAllMods); 
+EventRegistration evReg = myBranch.trackChanges(20000L, (ChangeEventListener) proxy, "");
+lrm.renewFor(Lease.FOREVER);
+</pre></td></tr></table><font size=-1>Example 7) Registering for ChangeEvents</font>
+</center><br/><br/>
+
+Now for a little explanation of what <code>myBranch.trackChanges(20000L, (ChangeEventListener) proxy, "") </code> means<br/>
+Essentially, you are registering for events on one particular branch, requesting a lease of 20s, with the given ChangeEventListener. But what does the "" mean? That signifies the item you are interested in. You can either register on the branch, or on a single item within that branch.<br/>Imagine that you the branch myBranch is arranged like so
+<pre>
+myBranch
+	|
+	+-------myItem
+	|
+	+-------yourItem
+</pre>
+If I change "yourItem", no event will be fired, if I change "myItem" the application will be notified. In the example I don't provide an exact item, so I will be informed when any of these items are changed on this branch.<br/>
+One final thing - look at the following structure, similar to the one above but with a child branch
+<pre>
+myBranch
+	|
+	+-------myItem
+	|
+	+-------yourItem
+	|
+	+------>subBranch
+			|
+			+-------anotherItem
+</pre>
+It may be quite reasonable to expect that because "subBranch" is a <i>>child</i> of "myBranch", then any changes to items in subBranch would cause the listeners on myBranch to be fired. Well, it might be quite reasonable, but it doesn't happen.Thor branches have no concept of a parent, so you can't go 'up' the tree to find out which branch you are tagged to and then fire the parent listeners, and so on. Some kind of state has to be stored so that the idea of a parent is simulated, but you have to do that ion your client, as Thor won't do it for you. Therefore, you must register on sub-branches if you need that facility<br/>
+<h3>The Change Types</h3>
+If you look in the ChangeConstants class you will find 4 constants:
+<ul>
+<li>CREATE</li>
+<li>DELETE</li>
+<li>READ</li>
+<li>WRITE</li>
+</ul>
+When you register a listener, you will implement the <code>getChangeType()</code> method, you then add all the constants together i.e. to be notified of only addition of new items and removal of items from a branch getChangeType() will return <code>ChangeConstants.CREATE | ChangeConstants.DELETE</code><br/>
+<em>What is the difference between CREATE and WRITE?</em><br/> CREATE events are fired in response to a call to add() on a branch, whereas WRITE events are fired in response to overwrite() calls on the branch, although within the tree they do pretty much the same thing.<br/><br/>
+<a name="prefs"/>
+<h2>Use the Preferences provider</h2>
+<b>Caution: This is currently in beta - use at your own risk</b>
+In order to use the preferences provider, you must set up to different branches from the root. These are<ul><li>Prefs/User</li><li>Prefs/Systems</li></ul>
+This is so that preferences are kept away from the general service configurations or other data stored in Thor. If you wish to show data in a preferences block that is stored somewhere else in Thor, use a link branch, to the original data.<br/>
+After Thor has been configured to accept properties, you must then configure your client to accept Thor as a provider<br/>
+Either set the property on the command line<br/>
+<code>-Djava.util.prefs.PreferencesFactory=org.jini.projects.thor.prefs.ThorPreferencesFactory<br/>
+OR<br/>
+System.getProperties().setProperty("java.util.prefs.PreferencesFactory", "org.jini.projects.thor.prefs.ThorPreferencesFactory");</code><br/> You will also need to specify the follwoing system properties, <code>thor.prefs.group</code> and <code>thor.prefs.name</code> so that Thor can find the correct instance of Thor for your properties. You'll also need to specify your security policy fil and a security manager. see the PrefsRunner class in the org.jini.projects.thor.prefs package<br/><br/>
+<a name="config"/>
+<h2>Use Thor for Jini 2.0 Configuration files</h2> 
+
+<br/><br/><hr><a href="index.html">Back to Overview</a>
+</body>
+
+</html>
